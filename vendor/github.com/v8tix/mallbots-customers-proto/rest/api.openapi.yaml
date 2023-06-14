@@ -1,0 +1,39 @@
+openapiOptions:
+  file:
+    - file: "pb/customers.api.proto"
+      option:
+        info:
+          title: Customers
+          version: "1.0.0"
+        basePath: /
+  method:
+    - method: pb.CustomersService.RegisterCustomer
+      option:
+        operationId: createCustomer
+        tags:
+          - Customer
+        summary: Create a new customer
+    - method: pb.CustomersService.ChangeSmsNumber
+      option:
+        operationId: changeSmsNumber
+        tags:
+          - Customer
+        summary: Change a customers SMS number
+    - method: pb.CustomersService.EnableCustomer
+      option:
+        operationId: enableCustomer
+        tags:
+          - Customer
+        summary: Enable a customer
+    - method: pb.CustomersService.DisableCustomer
+      option:
+        operationId: DisableCustomer
+        tags:
+          - Customer
+        summary: Disable a customer
+    - method: pb.CustomersService.GetCustomer
+      option:
+        operationId: getCustomer
+        tags:
+          - Customer
+        summary: Get a customer
