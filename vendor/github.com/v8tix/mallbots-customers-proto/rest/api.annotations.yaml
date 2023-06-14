@@ -1,0 +1,18 @@
+type: google.api.Service
+config_version: 3
+http:
+  rules:
+    - selector: pb.CustomersService.RegisterCustomer
+      post: /api/customers
+      body: "*"
+    - selector: pb.CustomersService.ChangeSmsNumber
+      put: /api/customers/{id}/change-sms
+      body: "*"
+    - selector: pb.CustomersService.EnableCustomer
+      put: /api/customers/{id}/enable
+      body: "*"
+    - selector: pb.CustomersService.DisableCustomer
+      put: /api/customers/{id}/disable
+      body: "*"
+    - selector: pb.CustomersService.GetCustomer
+      get: /api/customers/{id}
